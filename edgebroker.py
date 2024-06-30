@@ -44,7 +44,7 @@ def on_message(client, userdata, msg):
         # Make prediction
                 prediction = clf.predict(data)
                 print("Prediction: ", prediction)
-                output="{\"output\":["+str(prediction[0]) +"] ,\"stime\":" + str(stime)+"}"
+                output="{\"output\":["+str(prediction[0]) +"] ,\"stime\":[" + str(stime)+"]}"
                 
                 json_data = json.dumps(output, indent=4)
                 print(json_data)
